@@ -1,11 +1,15 @@
-function getParagraph1()
+var i=0;
+var images =["i1.jpg","i2.jpg","i3.jpg","i4.jpg","i5.jpg","i6.jpg"];
+var names =["My Father", "My Mother", "Myself", "My younger sister", "My Grandfather", "My GrandMother"];
+
+function nextslide()
 {
-    var inputs = [];
+  document.getElementById("img1").src = images[i];
+  document.getElementById("hd").innerHTML = names[i];
+  i++;
+  if(i==6)
+  {
+    i=0;
+  }
 }
 
-for(var  i = 1 ; i<=6 ; i++)
-{
-    inputs.push(document.getElementById(para1_INPUT_BOX_ + i).value);
-}
-inputs.join(". ");
-document.getElementById("showParagraph1").innerHTML = inputs.join(". ");
